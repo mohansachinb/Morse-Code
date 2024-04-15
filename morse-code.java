@@ -1,264 +1,68 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
-public class morse-cove {    
-public static void main(String[] args) {    
-    Scanner sc=new Scanner(System.in);
-    System.out.println("Enter your choice");
-    char n = sc.next().charAt(0);
-    //int n = sc.nextInt();
-    switch(n)  
-    {  
-        case 'A':   
-            System.out.println("._");  
-            break; 
 
-        case 'B':   
-            System.out.println("_...");  
-            break; 
-
-        case 'C':   
-            System.out.println("_._.");  
-            break;
-
-        case 'D':   
-            System.out.println("_..");  
-            break;
-
-        case 'E':   
-            System.out.println(".");  
-            break;
-
-        case 'F':   
-            System.out.println(".._.");  
-            break;
-
-        case 'G':   
-            System.out.println("__.");  
-            break;
-
-        case 'H':   
-            System.out.println("....");  
-            break;
-
-        case 'I':   
-            System.out.println("..");  
-            break;  
-        case 'J':   
-            System.out.println(".___");  
-            break;  
-
-            case 'K':   
-            System.out.println("_._");  
-            break; 
-
-        case 'L':   
-            System.out.println("._..");  
-            break; 
-
-        case 'M':   
-            System.out.println("__");  
-            break; 
-
-        case 'N':   
-            System.out.println("_.");  
-            break;
-
-        case 'O':   
-            System.out.println("___");  
-            break;
-
-        case 'P':   
-            System.out.println(".__.");  
-            break;
-
-        case 'Q':   
-            System.out.println("__._");  
-            break; 
-
-        case 'R':   
-            System.out.println("._.");  
-            break;  
-
-        case 'S':   
-            System.out.println("...");  
-            break;  
-
-        case 'T':   
-            System.out.println("_");  
-            break;  
-
-            case 'U':   
-            System.out.println(".._");  
-            break; 
-
-        case 'V':   
-            System.out.println("..._");  
-            break; 
-
-        case 'W':   
-            System.out.println(".__");  
-            break; 
-
-        case 'X':   
-            System.out.println("_.._");  
-            break;
-
-        case 'Y':   
-            System.out.println("_.__");  
-            break;  
-
-        case 'Z':   
-            System.out.println("__..");  
-            break;
-
-        case 'a':   
-            System.out.println("._");  
-            break; 
-
-        case 'b':   
-            System.out.println("_...");  
-            break; 
-
-        case 'c':   
-            System.out.println("_._.");  
-            break;
-
-        case 'd':   
-            System.out.println("_..");  
-            break; 
-
-        case 'e':   
-            System.out.println(".");  
-            break; 
-
-        case 'f':   
-            System.out.println(".._.");  
-            break; 
-
-        case 'g':   
-            System.out.println("__.");  
-            break;
-
-        case 'h':   
-            System.out.println("....");  
-            break; 
-
-            case 'i':   
-            System.out.println("..");  
-            break; 
-
-        case 'j':   
-            System.out.println(".___");  
-            break; 
-
-        case 'k':   
-            System.out.println("_._");  
-            break;
-
-        case 'l':   
-            System.out.println("._..");  
-            break; 
-
-            case 'm':   
-            System.out.println("__");  
-            break;
-
-        case 'n':   
-            System.out.println("_.");  
-            break; 
-
-        case 'o':   
-            System.out.println("___");  
-            break; 
-
-        case 'p':   
-            System.out.println(".__.");  
-            break;
-
-        case 'q':   
-            System.out.println("__._");  
-            break;
-
-            case 'r':   
-            System.out.println("._.");  
-            break; 
-
-        case 's':   
-            System.out.println("...");  
-            break;
-
-        case 't':   
-            System.out.println("_");  
-            break;
-
-        case 'u':   
-            System.out.println(".._");  
-            break;
-
-        case 'v':   
-            System.out.println("..._");  
-            break;
-
-        case 'w':   
-            System.out.println(".__");  
-            break;
-
-        case 'x':   
-            System.out.println("_.._");  
-            break; 
-
-        case 'y':   
-            System.out.println("_.__");  
-            break; 
-
-        case 'z':   
-            System.out.println("__..");  
-            break; 
-
-
-
-            case '1':   
-            System.out.println(".____");  
-            break; 
-
-        case '2':   
-            System.out.println("..___");  
-            break;
-
-        case '3':   
-            System.out.println("...__");  
-            break;
-
-        case '4':   
-            System.out.println("...._");  
-            break;
-
-        case '5':   
-            System.out.println(".....");  
-            break;
-
-        case '6':   
-            System.out.println("_....");  
-            break;
-
-        case '7':   
-            System.out.println("__...");  
-            break; 
-
-        case '8':   
-            System.out.println("___..");  
-            break; 
-
-        case '9':   
-            System.out.println("____.");  
-            break; 
-
-        case '0':   
-            System.out.println("_____");  
-            break; 
-
-
-        default:   
-            System.out.println("Wrong choice: ");  
-    }  
-}    
-}   
+public class MorseCodeTranslator {
+    public static void main(String[] args) {
+        Map<Character, String> map = new HashMap<>();
+        map.put('A', ".-");
+        map.put('B', "-...");
+        map.put('C', "-.-.");
+        map.put('D', "-..");
+        map.put('E', ".");
+        map.put('F', "..-.");
+        map.put('G', "--.");
+        map.put('H', "....");
+        map.put('I', "..");
+        map.put('J', ".---");
+        map.put('K', "-.-");
+        map.put('L', ".-..");
+        map.put('M', "--");
+        map.put('N', "-.");
+        map.put('O', "---");
+        map.put('P', ".--.");
+        map.put('Q', "--.-");
+        map.put('R', ".-.");
+        map.put('S', "...");
+        map.put('T', "-");
+        map.put('U', "..-");
+        map.put('V', "...-");
+        map.put('W', ".--");
+        map.put('X', "-..-");
+        map.put('Y', "-.--");
+        map.put('Z', "--..");
+        map.put('1', ".----");
+        map.put('2', "..---");
+        map.put('3', "...--");
+        map.put('4', "....-");
+        map.put('5', ".....");
+        map.put('6', "-....");
+        map.put('7', "--...");
+        map.put('8', "---..");
+        map.put('9', "----.");
+        map.put('0', "-----");
+        map.put('?', "..--..");
+        map.put(',', "--..--");
+        map.put('/', "-..-.");
+        map.put('-', "-....-");
+        map.put(' ', "|");
+        
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Your Sentence:");
+        String english = sc.nextLine().toUpperCase();
+
+        StringBuilder result = new StringBuilder();
+        for (char ch : english.toCharArray()) {
+            if (map.containsKey(ch)) {
+                result.append(map.get(ch)).append(" ");
+            } else if (ch == ' ') {
+                result.append(" ");
+            } else {
+                result.append("UNKNOWN ");
+            }
+        }
+
+        System.out.println("English:\t" + english + "\nMorse Code:\n" + result.toString());
+    }
+}
