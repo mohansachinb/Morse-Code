@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class morse-code {
+public class MorseCodeTranslator {
     public static void main(String[] args) {
         Map<Character, String> map = new HashMap<>();
         map.put('A', ".-");
