@@ -20,7 +20,7 @@ Since Map is an interface, objects cannot be created of the type map. We always 
 <h3>Syntax:</h3>
 
 Map hm = new HashMap(); 
-# Obj is the type of the object to be stored in Map</p>
+// Obj is the type of the object to be stored in Map</p>
 
 
 
